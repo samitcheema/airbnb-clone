@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
 
 const LodgingDetails = (props) => {
   return (
@@ -7,6 +7,6 @@ const LodgingDetails = (props) => {
       <Text>Checking LodgingDetails</Text>
     </View>
   );
-}
+};
 
 export default LodgingDetails;
