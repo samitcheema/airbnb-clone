@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   image: {
@@ -32,14 +32,15 @@ const styles = StyleSheet.create({
   },
   searchBarButton: {
       backgroundColor: 'white',
-      width: '100%',
-      height: 30,
-      borderRadius: 50,
+      width: Dimensions.get('screen').width - 40,
+      height: 40,
+      borderRadius: 20,
+      marginHorizontal: 20,
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
       position: 'absolute',
-      top: 50,
+      top: 20,
       zIndex: 100,
   },
   searchBarButtonText: {
