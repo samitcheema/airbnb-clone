@@ -17,7 +17,11 @@ import {
 } from "react-native/Libraries/NewAppScreen";
 
 import HomeScreen from "./src/screens/home";
-import LodgingDetails from "./src/components/lodgingDetails/index";
+import LodgingDetails from "./src/components/lodging/index";
+
+import lodgingData from "./assets/data/lodgingData";
+
+const firstPost = lodgingData[0];
 
 const App: () => React$Node = () => {
   return (
@@ -26,7 +30,7 @@ const App: () => React$Node = () => {
       <SafeAreaView>
         <ScrollView showsVerticalScrollIndicator={false}>
           <HomeScreen />
-          <LodgingDetails />
+          <LodgingDetails data={firstPost} />
         </ScrollView>
       </SafeAreaView>
     </>
