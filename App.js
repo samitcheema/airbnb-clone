@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,7 +6,7 @@ import {
   View,
   Text,
   StatusBar,
-} from 'react-native';
+} from "react-native";
 
 import {
   Header,
@@ -14,16 +14,20 @@ import {
   Colors,
   DebugInstructions,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+} from "react-native/Libraries/NewAppScreen";
 
-import HomeScreen from './src/screens/home';
+import HomeScreen from "./src/screens/home";
+import LodgingDetails from "./src/components/lodgingDetails/index";
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <HomeScreen />
+        <ScrollView>
+          <HomeScreen />
+          <LodgingDetails />
+        </ScrollView>
       </SafeAreaView>
     </>
   );
