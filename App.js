@@ -19,6 +19,7 @@ import {
 import HomeScreen from "./src/screens/home";
 import SearchResultsScreen from "./src/screens/searchResults";
 import SearchLocationsScreen from "./src/screens/searchLocations";
+import GuestsScreen from "./src/screens/guests";
 
 import Lodging from "./src/components/lodging/index";
 
@@ -35,7 +36,8 @@ const App: () => React$Node = () => {
           {/* <HomeScreen /> */}
           {/* <Lodging data={firstPost} /> */}
           {/* <SearchResultsScreen /> */}
-          <SearchLocationsScreen />
+          {/* <SearchLocationsScreen /> */}
+          <GuestsScreen />
         </ScrollView>
       </SafeAreaView>
     </>
