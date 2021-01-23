@@ -4,7 +4,8 @@ const styles = StyleSheet.create({
   rowContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 20,
+    paddingVertical: 20,
+    marginHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: "lightgrey",
   },
@@ -16,12 +17,16 @@ const styles = StyleSheet.create({
 
   button: {
     borderWidth: 1,
-    height: 30,
-    width: 30,
-    borderRadius: 15,
+    height: 40,
+    width: 40,
+    borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
     borderColor: "#7d7d7d",
+  },
+
+  plusMinus: {
+    fontSize: 18,
   },
 });
 
