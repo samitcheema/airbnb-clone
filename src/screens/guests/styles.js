@@ -28,6 +28,24 @@ const styles = StyleSheet.create({
   plusMinus: {
     fontSize: 18,
   },
+
+  bottomButton: {
+    height: 50,
+    width: "80%",
+    backgroundColor: "#f15454",
+    justifyContent: "center",
+    alignItems: "center",
+    bottom: 0,
+    borderRadius: 10,
+    margin: 20,
+  },
+
+  bottomContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-end",
+    paddingTop: "100%",
+  },
 });
 
 export default styles;

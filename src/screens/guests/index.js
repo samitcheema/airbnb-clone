@@ -73,6 +73,13 @@ const GuestsScreen = (props) => {
           </Pressable>
         </View>
       </View>
+      <View style={styles.bottomContainer}>
+        <Pressable style={styles.bottomButton}>
+          <Text style={{ fontSize: 18, color: "white", fontWeight: "bold" }}>
+            Search
+          </Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
