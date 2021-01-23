@@ -8,38 +8,15 @@ import {
   StatusBar,
 } from "react-native";
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from "react-native/Libraries/NewAppScreen";
+import "react-native-gesture-handler";
 
-import HomeScreen from "./src/screens/home";
-import SearchResultsScreen from "./src/screens/searchResults";
-import SearchLocationsScreen from "./src/screens/searchLocations";
-import GuestsScreen from "./src/screens/guests";
-
-import Lodging from "./src/components/lodging/index";
-
-import lodgingData from "./assets/data/lodgingData";
-
-const firstPost = lodgingData[0];
+import Router from "./src/navigation/router";
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          {/* <HomeScreen /> */}
-          {/* <Lodging data={firstPost} /> */}
-          {/* <SearchResultsScreen /> */}
-          {/* <SearchLocationsScreen /> */}
-          <GuestsScreen />
-        </ScrollView>
-      </SafeAreaView>
+      <Router />
     </>
   );
 };
