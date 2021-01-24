@@ -3,7 +3,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import HomeBottomTabNavigation from "./homeBottomTabNavigation";
-import HomeScreen from "../screens/home";
 import SearchLocationsScreen from "./../screens/searchLocations/index";
 import SearchResultsScreen from "./../screens/searchResults/index";
 import GuestsScreen from "./../screens/guests/index";
@@ -35,7 +34,7 @@ const Router = () => {
           name="Guests"
           component={GuestsScreen}
           options={{ headerTitleAlign: "center", title: "Guests" }}
-        /> 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
