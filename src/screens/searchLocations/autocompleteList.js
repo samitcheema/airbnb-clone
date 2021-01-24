@@ -8,16 +8,11 @@ import styles from "./styles";
 const AutocompleteList = ({ item }) => {
   const navigation = useNavigation();
   return (
-    <View>
-      <Pressable
-        style={styles.rowContainer}
-        onPress={() => navigation.navigate("Guests")}
-      >
-        <View style={styles.iconContainer}>
-          <Entypo name={"location-pin"} size={30} />
-        </View>
-        <Text style={styles.locationsText}>{item.description}</Text>
-      </Pressable>
+    <View style={styles.rowContainer}>
+      <View style={styles.iconContainer}>
+        <Entypo name={"location-pin"} size={30} />
+      </View>
+      <Text style={styles.locationsText}>{item.description}</Text>
     </View>
   );
 };
