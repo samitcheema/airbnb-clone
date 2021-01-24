@@ -2,7 +2,10 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    padding: 20,
+    backgroundColor: "white",
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
   },
 
   searchInput: {
@@ -21,7 +24,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     margin: 10,
   },
-  locationsText: {},
+  locationsText: {
+    fontSize: 12,
+  },
 });
 
 export default styles;

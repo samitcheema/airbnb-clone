@@ -12,11 +12,12 @@ const SearchLocationsScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
-      <View>
+    <View style={{ backgroundColor: "#f15454" }}>
+      <View style={styles.container}>
         <GooglePlacesAutocomplete
           placeholder="Where are you headed?"
           onPress={(data, details = null) => {
+            navigation.navigate("Guests");
             console.log(data, details);
           }}
           fetchDetails={true}

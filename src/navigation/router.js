@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator headerMode="screen">
         <Stack.Screen
           name="Home"
           component={HomeBottomTabNavigation}
@@ -23,12 +23,24 @@ const Router = () => {
         <Stack.Screen
           name="Search Locations"
           component={SearchLocationsScreen}
-          options={{ headerTitleAlign: "center", title: "Search" }}
+          options={{
+            headerTitleAlign: "center",
+            title: "Search",
+            headerShown: true,
+            headerBackTitleVisible: false,
+            headerStyle: {
+              backgroundColor: "#f15454",
+              elevation: 0,
+            },
+          }}
         />
         <Stack.Screen
           name="Search Results"
           component={SearchResultsScreen}
-          options={{ headerTitleAlign: "center", title: "Results" }}
+          options={{
+            headerTitleAlign: "center",
+            title: "Results",
+          }}
         />
         <Stack.Screen
           name="Guests"
