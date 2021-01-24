@@ -11,12 +11,22 @@ import HomeScreen from "./../screens/home/index";
 import GuestsScreen from "./../screens/guests/index";
 import SearchLocationsScreen from "./../screens/searchLocations/index";
 import SearchResultsScreen from "./../screens/searchResults/index";
+import ExploreNavigation from "./exploreNavigation";
 
 const Tab = createBottomTabNavigator();
 
 const HomeBottomTabNavigation = () => {
   return (
     <Tab.Navigator tabBarOptions={{ activeTintColor: "#f15454" }}>
+      <Tab.Screen
+        name="Explore"
+        component={ExploreNavigation}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <FontAwesome5 name="search" size={25} color={color} />
+          ),
+        }}
+      />
       <Tab.Screen
         name="Airbnb"
         component={HomeScreen}
