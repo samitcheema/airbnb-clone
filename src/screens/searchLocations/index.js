@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { View, Text, TextInput, FlatList, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import Entypo from "react-native-vector-icons/Entypo";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 
+import config from "../../../config";
+import searchesults from "../../../assets/data/searchData";
 import styles from "./styles";
-import searchResults from "../../../assets/data/searchData";
+import AutocompleteList from "./autocompleteList";
 
 const SearchLocationsScreen = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,27 +15,21 @@ const SearchLocationsScreen = () => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.searchInput}
-        placeholder="Where are you headed?"
-        value={searchTerm}
-        onChangeText={setSearchTerm}
-      />
-
-      <FlatList
-        data={searchResults}
-        renderItem={({ item }) => (
-          <Pressable
-            style={styles.rowContainer}
-            onPress={() => navigation.navigate("Guests")}
-          >
-            <View style={styles.iconContainer}>
-              <Entypo name={"location-pin"} size={30} />
-            </View>
-            <Text style={styles.locationsText}>{item.description}</Text>
-          </Pressable>
-        )}
-      />
+      <View>
+        <GooglePlacesAutocomplete
+          placeholder="Where are you headed?"
+          onPress={(data, details = null) => {
+            // 'details' is provided when fetchDetails = true
+            console.log(data, details);
+          }}
+          suppressDefaultStyles
+          renderRow={(item) => <AutocompleteList item={item} />}
+          query={{
+            key: config.API_KEY,
+            language: "en",
+          }}
+        />
+      </View>
     </View>
   );
 };
