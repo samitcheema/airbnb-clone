@@ -24,9 +24,9 @@ const MapsScreen = () => {
           <MarkerPoint
             coordinate={data.coordinate}
             totalPrice={data.totalPrice}
-            isSelected={lodgingData.id === currentSelect}
+            isSelected={data.id === currentSelect}
             onPress={(currentSelect) => {
-              currentSelect = setCurrentSelect(lodgingData.id);
+              currentSelect = setCurrentSelect(data.id);
             }}
           />
         ))}
