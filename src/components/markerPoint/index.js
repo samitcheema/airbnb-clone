@@ -7,7 +7,7 @@ const MarkerPoint = (props) => {
   const { coordinate, totalPrice, onPress, isSelected } = props;
   return (
     <View>
-      <Marker coordinate={coordinate}>
+      <Marker coordinate={coordinate} onPress={onPress}>
         <Text
           style={{
             backgroundColor: "white",
