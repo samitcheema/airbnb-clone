@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    width: Dimensions.get("window").width,
+    width: Dimensions.get("window").width - 40,
   },
 
   innerContainer: {
@@ -10,8 +10,18 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     overflow: "hidden",
-    width: "85%",
+    width: "90%",
     marginHorizontal: 5,
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.39,
+    shadowRadius: 8.3,
+
+    elevation: 13,
   },
 
   image: {
@@ -21,12 +31,13 @@ const styles = StyleSheet.create({
 
   bedrooms: {
     color: "#7a7474",
-    fontSize: 16,
+    fontSize: 14,
     marginVertical: 10,
   },
 
   description: {
-    fontSize: 16,
+    marginVertical: 10,
+    fontSize: 14,
     lineHeight: 26,
   },
 
