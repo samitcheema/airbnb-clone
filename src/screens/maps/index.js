@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View } from "react-native";
+import { FlatList, View } from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps"; // remove PROVIDER_GOOGLE import if not using Google Maps
 import styles from "./styles";
 import lodgingData from "../../../assets/data/lodgingData";
@@ -34,7 +34,12 @@ const MapsScreen = () => {
         ))}
       </MapView>
       <View style={{ position: "absolute", bottom: 10 }}>
-        <LodgingCarousel data={lodgingData[1]} />
+        <FlatList
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={lodgingData}
+          renderItem={({ item }) => <LodgingCarousel data={item} />}
+        />
       </View>
     </View>
   );
