@@ -23,8 +23,6 @@ const LodgingCarousel = (props) => {
             <Text style={styles.newPrice}> ${data.newPrice}</Text>
             <Text>/night</Text>
           </Text>
-
-          <Text style={styles.totalPrice}>${data.totalPrice} total</Text>
         </View>
       </View>
     </View>
