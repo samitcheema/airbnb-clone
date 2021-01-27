@@ -1,15 +1,22 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    width: Dimensions.get("window").width,
+  },
+
+  innerContainer: {
+    flexDirection: "row",
+    backgroundColor: "white",
+    borderRadius: 10,
+    overflow: "hidden",
+    width: "85%",
+    marginHorizontal: 5,
   },
 
   image: {
-    width: "100%",
-    height: 200,
-    borderRadius: 10,
-    resizeMode: "cover",
+    height: "100%",
+    aspectRatio: 1,
   },
 
   bedrooms: {
@@ -19,7 +26,7 @@ const styles = StyleSheet.create({
   },
 
   description: {
-    fontSize: 18,
+    fontSize: 16,
     lineHeight: 26,
   },
 

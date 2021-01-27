@@ -4,6 +4,7 @@ import MapView, { PROVIDER_GOOGLE } from "react-native-maps"; // remove PROVIDER
 import styles from "./styles";
 import lodgingData from "../../../assets/data/lodgingData";
 import MarkerPoint from "../../components/markerPoint/";
+import LodgingCarousel from "../../components/lodgingCarousel";
 
 const MapsScreen = () => {
   const [currentSelect, setCurrentSelect] = useState(null);
@@ -22,6 +23,7 @@ const MapsScreen = () => {
       >
         {lodgingData.map((data) => (
           <MarkerPoint
+            key={data.id}
             coordinate={data.coordinate}
             totalPrice={data.totalPrice}
             isSelected={data.id === currentSelect}
@@ -31,6 +33,9 @@ const MapsScreen = () => {
           />
         ))}
       </MapView>
+      <View style={{ position: "absolute", bottom: 10 }}>
+        <LodgingCarousel data={lodgingData[1]} />
+      </View>
     </View>
   );
 };
