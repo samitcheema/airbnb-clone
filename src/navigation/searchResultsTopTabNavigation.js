@@ -8,6 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 const SearchResultsTopTabNavigation = () => {
   return (
     <Tab.Navigator
+      swipeEnabled={false}
       tabBarOptions={{
         activeTintColor: "#f15454",
         indicatorStyle: { backgroundColor: "#f15454" },
