@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FlatList, View } from "react-native";
+import { Dimensions, FlatList, View } from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps"; // remove PROVIDER_GOOGLE import if not using Google Maps
 import styles from "./styles";
 import lodgingData from "../../../assets/data/lodgingData";
@@ -35,6 +35,9 @@ const MapsScreen = () => {
       </MapView>
       <View style={{ position: "absolute", bottom: 10 }}>
         <FlatList
+          snapToAlignment="center"
+          snapToInterval={Dimensions.get("window").width - 60}
+          decelerationRate="fast"
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           data={lodgingData}
